@@ -1,6 +1,7 @@
 import printToDOM from "./printToDOM"
 import fetchData from "./fetchData";
 import buildHTML from "./buildHTML";
+import fetchPlaces from "./fetchPlaces";
 
 const dashboardReload = () => {
 
@@ -12,21 +13,28 @@ const dashboardReload = () => {
         output.classList.remove("hidden")
     }
 
+    fetchPlaces()
+    .then(places => {
+        document.getElementById("firstTitle").innerHTML = places[0].name
+        document.getElementById("secondTitle").innerHTML = places[1].name
+        document.getElementById("thirdTitle").innerHTML = places[2].name
+    })
+
     fetchData()
     .then(interests => {
-        document.getElementById("italyDisplay").innerHTML = ""
-        document.getElementById("switzerlandDisplay").innerHTML = ""
-        document.getElementById("franceDisplay").innerHTML = ""
+        document.getElementById("firstDisplay").innerHTML = ""
+        document.getElementById("secondDisplay").innerHTML = ""
+        document.getElementById("thirdDisplay").innerHTML = ""
         interests.forEach(interest => {
             const html = buildHTML(interest)
             if (interest.placeId === 1) {
-                printToDOM(html, "italyDisplay")
+                printToDOM(html, "firstDisplay")
             }
             if (interest.placeId === 2) {
-                printToDOM(html, "switzerlandDisplay")
+                printToDOM(html, "secondDisplay")
             }
             if (interest.placeId === 3) {
-                printToDOM(html, "franceDisplay")
+                printToDOM(html, "thirdDisplay")
             }
         })
     })

@@ -2,12 +2,12 @@
   "places": [
     {
       "id": 1,
-      "name": "Italy",
+      "name": "Germany",
       "visa_required": false
     },
     {
       "id": 2,
-      "name": "Switzerland",
+      "name": "Italy",
       "visa_required": true
     },
     {
@@ -22,12 +22,6 @@
       "placeId": 1,
       "name": "Local Market",
       "description": "Local market where you can try to purchase local products and try the local food"
-    },
-    {
-      "name": "awefawef",
-      "description": "wefawefawef",
-      "placeId": 1,
-      "id": 2
     },
     {
       "name": "waefawefawefawawef",

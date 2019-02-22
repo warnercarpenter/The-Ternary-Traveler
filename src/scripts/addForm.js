@@ -1,5 +1,5 @@
-const addForm = () => {
-    return `
+const addForm = (places) => {
+    let formHTML = `
     <div id="addForm" class="addForm">
         <p>Name:</p>
         <input type="text" id="addFormName"></input><br/>
@@ -7,13 +7,18 @@ const addForm = () => {
         <textarea id="addFormDescription"></textarea><br/>
         <p>Location:</p>
         <select id="addFormPlace">
-            <option value="1">Italy</option>
-            <option value="2">Switzerland</option>
-            <option value="3">France</option>
+    `
+    places.forEach(place => {
+        formHTML += `<option value="${place.id}">${place.name}</option>`
+    })
+
+    formHTML += `
         </select><br/>
         <button id="save">Save</button>
     </div>
     `
+
+    return formHTML
 }
 
 export default addForm
