@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The Ternary Traveler</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
 </head>
-<body>
-    <article class="output">
 
-    </article>
+<body>
+    <div id="masterContainer" class="masterContainer">
+        <div id="titleAndContent" class="titleAndContent">
+            <div id="headerAndButton" class="headerAndButton"><h2 id="title" class="title">The Ternary Traveler 🏝</h2><button id="add">Add Point of Interest</button></div>
+
+            <div id="formContainer"></div>
+
+            <article id="output" class="output">
+                <div id="italyContainer" class="locationContainer">
+                    <div class="boxTitle">
+                        <span id="italyTitle" class="locationTitle">Italy</span>
+                    </div>
+                    <div id="italyDisplay" class="locationDisplay"></div>
+                </div>
+                <div id="switzerlandContainer" class="locationContainer">
+                    <div class="boxTitle">
+                        <span id="switzerlandTitle" class="locationTitle">Switzerland</span>
+                    </div>
+                    <div id="switzerlandDisplay" class="locationDisplay"></div>
+                </div>
+                <div id="franceContainer" class="locationContainer">
+                    <div class="boxTitle">
+                        <span id="franceTitle" class="locationTitle">France</span>
+                    </div>
+                    <div id="franceDisplay" class="locationDisplay"></div>
+                </div>
+            </article>
+        </div>
+
+        <div id="footer" class="footer">Warner Carpenter, 2019</div>
+    </div>
 
     <script src="bundle.js"></script>
 </body>
+
 </html>

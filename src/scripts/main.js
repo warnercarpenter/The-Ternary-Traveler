@@ -1,8 +1,5 @@
-import sayHello from "./hello"
-import sayGoodbye from "./goodbye"
-import SandwichMaker from "./sandwichMaker"
+import dashboardReload from "./dashboardReload";
+import addEventListeners from "./addEventListeners";
 
-sayHello()
-sayGoodbye()
-
-SandwichMaker.placeOrder("rye", "capicola", "provolone")
+addEventListeners()
+dashboardReload()
